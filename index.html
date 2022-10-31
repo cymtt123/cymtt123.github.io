@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitor</title>
     <script>
-        window.onload = function () {
-            console.log('1');
+        var flag = true;
+        var result;
+        window.onload = function (flag) {
+            while (flag) {
+                fetch("http://vdb.vandenbergchina.com/ItemApi/lists?sid=8010056&title=盲盒&p=1&supplier=32294&pid=35779671").then(res => res.json()).then(data => result = data);
+                console.log(result);
+            }
         }
     </script>
 </head>
