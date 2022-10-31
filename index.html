@@ -10,13 +10,13 @@
         var flag = true;
         var result;
         window.onload = function (flag) {
-            while (flag) {
-                setInterval(function () {
-                    fetch("http://vdb.vandenbergchina.com/ItemApi/lists?sid=8010056&title=盲盒&p=1&supplier=32294&pid=35779671").then(res => res.json()).then(data => result = data);
-                    console.log(result);
-                }, 15000)
+            // while (flag) {
+            // setInterval(function () {
+            fetch("http://vdb.vandenbergchina.com/ItemApi/lists?sid=8010056&title=盲盒&p=1&supplier=32294&pid=35779671").then(res => res.json()).then(data => result = data);
+            console.log(result);
+            // }, 15000)
 
-            }
+            // }
         }
     </script>
 </head>
